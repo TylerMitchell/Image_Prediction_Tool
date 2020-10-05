@@ -1,0 +1,121 @@
+body {
+    background: linear-gradient(0.25turn, #ffffff, #dddddd);
+}
+
+hr {
+    width: 95%;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+    max-width: 800px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: #ccdeff;
+    border-radius: 5px;
+}
+
+#projectDescription {
+    max-width: 600px;
+    background: #ccdeff;
+}
+
+#imageSelectionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    background-color: #ccdeff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#randomImageButton {
+    float: right;
+    width: 47%;
+    height: 100%;
+    margin: 0;
+    background-color: white;
+    cursor: pointer;
+}
+
+#fileLabel {
+    text-align: center;
+}
+
+#fileInput {
+    display: block;
+    width: 100%;
+    background-color: white;
+    cursor: pointer;
+    text-align: center;
+}
+
+#fileInputHide {
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputLine {
+    display: block;
+    width: 100%;
+    border: 1px dashed black;
+}
+
+#imageContainer {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+#selectedImage {
+    display: block;
+    object-fit: contain;
+    max-width: 600px;
+    max-height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#imagePredictionContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#axisLabel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.spacer {
+    width: 100%;
+}
+
+#imageURLInput {
+    width: 47%;
+    border-right: 1px dashed black;
+}
+
+span {
+    text-align: center;
+    width: 20%;
+}
+
+.areaContainer {
+    display: block;
+    position: absolute;
+    border: 1px solid red;
+    z-index: 10;
+   
+}

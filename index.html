@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Descriptive labels for your Images</title>
+
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="projectDescription">
+            <p><h3>You can upload an image or submit a public URL and we will use the ClarifAI API to get a list of concepts and the probability that they apply to that image.</h3></p>
+        </div>
+        <hr />
+        <div id="imageSelectionContainer">
+            <div class="inputLine">
+                <input id="imageURLInput" placeholder="Enter Public Image URL:" type="text"/>
+                <span>OR</span>
+                <button id="randomImageButton">Random Image!</button>
+            </div>
+            <div id="fileLabel" class="inputLine">
+                <span>Select a picture from your Computer:</span>
+            </div>
+            <div class="inputLine">
+                <label id="fileInput" for="fileInputHide">Select File</label>
+                <input type="file" id="fileInputHide" />
+            </div>
+        </div>
+        <div id="imageContainer">
+            <img id="selectedImage" src="" />
+        </div>
+        <div class="spacer"></div>
+        <div id="axisLabel">
+            <svg height="30" width="600">
+                <text x="0" y="15" fill="black">0%</text>
+                <text x="250" y="15" fill="black">Prediction Confidence %</text>
+                <polyline points="595,15 600,20 595,25"
+                style="fill:none;stroke:black;stroke-width:2" />
+                <line x1="0" y1="20" x2="600" y2="20" style="stroke:black;stroke-width:2" />
+                <text x="550" y="15" fill="black">100%</text>
+            </svg> 
+        </div>
+        <div id="imagePredictionContainer">
+            
+        </div>
+    </div>
+
+    <script src="./secrets/keys.js" type="text/javascript"></script>
+    <script src="./main.js" type="text/javascript"></script>
+</body>
+</html>
