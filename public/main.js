@@ -34,7 +34,9 @@ function renderBarChart(info, regions){
         .style("height", r => Math.floor((r.bottom_row - r.top_row) * tH) + "px");
     
     let t = div.selectAll("div").data(info)
-        .style("width", d => `${Math.floor( d[1]*(maxW-4)) }px`);
+        .text(d => `(%${(d[1]*100).toFixed(2)}) ${d[0]}`)
+        .style("width", d => `${Math.floor( d[1]*(maxW-4)) }px`)
+        .style("background", d => `linear-gradient(90deg, red 85%, rgba(0,${d[1]*255},0,1))`);
     t.exit().remove();
     t.enter().append('div')
         .attr("class", "probabilityBar")
@@ -43,6 +45,7 @@ function renderBarChart(info, regions){
         .style("width", "0px")
         .style("height", "20px")
         .text(d => `(%${(d[1]*100).toFixed(2)}) ${d[0]}`)
+        .style("width", d => `${Math.floor( d[1]*(maxW-4)) }px`)
         .style("background", d => `linear-gradient(90deg, red 85%, rgba(0,${d[1]*255},0,1))`)
         .transition().duration(2000).ease(d3.easeLinear).style("width", d => `${Math.floor(d[1]*(maxW-4))}px`);
     div.selectAll('div')
