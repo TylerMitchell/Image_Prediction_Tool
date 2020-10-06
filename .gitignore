@@ -1,2 +1,6 @@
 **/secrets
 **/Image_Prediction_Tool
+**.firebaserc
+**firebase.json
+**/firebase
+**.firebase

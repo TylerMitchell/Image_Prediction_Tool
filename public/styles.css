@@ -1,5 +1,7 @@
 body {
     background: linear-gradient(0.25turn, #ffffff, #dddddd);
+    padding: 0;
+    margin: 0;
 }
 
 hr {
@@ -13,7 +15,7 @@ hr {
     margin-left: auto;
     margin-right: auto;
     font-size: 18px;
-    max-width: 800px;
+    width: 800px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background: #ccdeff;
     border-radius: 5px;
